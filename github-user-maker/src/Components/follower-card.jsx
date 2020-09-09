@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const User = (props) => {
+const FollowerCard = props => {
 
-const Img = styled.img `
+    const Img = styled.img `
     width: 100px;
 `
 
@@ -24,16 +24,16 @@ const Div2 = styled.div `
 
 `
 
-    return( 
+    return(
         <Div>
             <Div2>
-            <h1>{props.user.name}</h1>
-            <Img src={props.user.avatar_url} alt='Bio' />
+                <h1>{props.follower.login}</h1>
+                <Img src={props.follower.avatar_url} />
             </Div2>
-            {/* <p>Followers:<a href={props.follower.html_url}>{props.follower.login}</a></p> */}
-
+                <p><a href={props.follower.html_url}>Check out his work!</a></p>
+            
         </Div>
     )
 }
 
-export default User;
+export default FollowerCard;
